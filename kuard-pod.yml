@@ -25,16 +25,7 @@ spec:
           timeoutSeconds: 1
           periodSeconds: 10
           failureThreshold: 3
----
-kind: Service
-apiVersion: v1
-metadata:
-  name: kuardservice
-spec:
-  type : LoadBalancer
-  selector:
-    app: kuard
-  ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 80
+      ports:
+        - containerPort: 8080
+          name: http
+          protocol: TCP
