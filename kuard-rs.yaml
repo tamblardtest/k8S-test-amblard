@@ -11,5 +11,5 @@ spec:
       version: "2"
    spec:
      containers:
-     -name: kuard
-     image: "gcr.io/kuar-demo/kuard-amd64:2"
+       -name: kuard
+        image: "gcr.io/kuar-demo/kuard-amd64:2"
