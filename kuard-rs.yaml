@@ -1,18 +1,15 @@
-apiVersion: apps/v1
+apiVersion: extensions/v1beta1
 kind: ReplicaSet
 metadata:
   name: kuard
 spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: kuard
+  replicas: 1
   template:
-    metadata:
-      labels:
-        app: kuard
-        version: "2"
-    spec:
-      containers:
-      - name: kuard
-        image: "gcr.io/kuar-demo/kuard-amd64:2"
+   metadata:
+    labels:
+      app: kuard
+      version: "2"
+   spec:
+     containers:
+     -name: kuard
+     image: "gcr.io/kuar-demo/kuard-amd64:2"
