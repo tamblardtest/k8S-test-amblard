@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  name: fluentd
+spec:
+  template:
+   metadata:
+    labels:
+      app: fluentd
+   spec:
+     containers:
+     -name: fluentd
+     image: "fluent/fluentd:v0.14.10"
