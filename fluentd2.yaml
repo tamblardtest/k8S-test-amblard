@@ -2,6 +2,9 @@ apiVersion: extensions/v1beta1
 kind: DaemonSet
 metadata:
   name: fluentd
+  namespace: kube-system
+  labels:
+    app: fluentd
 spec:
   template:
    metadata:
