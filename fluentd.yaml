@@ -10,7 +10,8 @@ spec:
    metadata:
     labels:
       app: fluentd
-   spec:
+    spec:
      containers:
-       -name: fluentd
-        image: fluent/fluentd:v0.14.10
+     -name: fluentd
+     image: fluent/fluentd:v0.14.10
+
